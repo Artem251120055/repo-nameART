@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Hotel "Sedona"</title>
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/styles.css"
+	</head>
+	<body>	
+	<div class="wrapper">
+		<header class="main-header clearfix">
+			
+				<nav class="main-navigator container ">
+					<li><a href="#">Информация</a></li>
+					<li><a href="#">Фото и видео</a></li>
+					<li class="main-logo"><a><img src="img/logo.png" alt="Логотип"></a></li>
+					<li><a href="#">Карта штата</a></li>
+					<li><a href="hotels.html">Гостинницы</a></li>
+				</nav>
+			
+		</header>
+		<main class="container">
+			<div class="index-logo">
+				<img src="img/slogan.png" width="576px" height="354px" alt="Welcome to Sedona">
+			</div>
+			<div class="tagline">
+				<b>Седона - небольшой городок в Аризоне, <br>заслуживающий большего!</b>
+				<p>Рассмотрим 5 причин, по которым седона круче, чем гранд каньон!</p>
+			</div>
+			<section class="content">
+				<div class="main-plus clearfix">
+					<div class="main-text left">
+						<h2>Настоящий городок</h2>
+						<div>- №1 -</div>
+						<p>Седона - не аттракцион для туристов,<br> там течет своя жизнь</p>
+					</div>
+					<img class="main-image right" src="img/preview_1.jpg" alt="City" height=" 255" width="800">
+				</div>
+				<div class="features clearfix">
+					<div class="features-text">
+						<i class="fi bg-Layer_12"></i>
+						<h2>Жильё</h2>
+						<p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+					</div>
+					<div class="features-text">
+						<i class="fi bg-Layer_13"></i>
+						<h2>Еда</h2>
+						<p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+					</div>
+					<div class="features-text">
+						<i class="fi bg-Layer_11"></i>
+						<h2>Сувениры</h2>
+						<p>Не только китайского, но и местного производства</p>
+					</div>
+				</div>
+				<div class="main-plus clearfix">
+					<div class="main-text right">
+						<h2>Там есть мост дьявола</h2>
+						<div>- №2 -</div>
+						<p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+					</div>
+					<img class="main-image left" src="img/preview_2.jpg" alt="Devil's ridge" height=" 255" width="800">
+				</div>
+
+				<div class="advices clearfix">
+					<div class="advices-text">
+						<h2>Небольшая площадь</h2>
+						<div>- №3 -</div>
+						<p>Все достопримечательности находятся очень близко</p>
+					</div>
+					<div class="advices-text">
+						<h2>Красивая дорога</h2>
+						<div>- №4 -</div>
+						<p>Ехать в седону из Лас-Вегаса совсем не скучно!</p>
+					</div>
+					<div class="advices-text">
+						<h2>Мало туристов</h2>
+						<div>- №5 -</div>
+						<p>Большинство едет в Гранд каньон и толпится там</p>
+					</div>
+				</div>
+			</section>
+			<section class="search">
+				<div class="search-hotel">
+					<b>Заинтересовались?</b>
+					<p>Укажите предполагаемые даты поездки, и мы покажем вас лучшие предложения гостинниц в седоне
+					</p>
+					<div class="search-btn-wrap"><a href="#" class="search-btn"  >Поиск гостинниц в седоне</a></div>
+				</div>	
+					<form class="form-booking form-booking-show">
+						<div class="input-line">
+							<label for="ch1">Дата заезда:
+							</label>
+							<input id="ch1" class="booking-calendar" name="checkin" type="text" placeholder="05 февраля 2026">
+						</div>
+						<div class="input-line">
+							<label for="ch2">Дата выезда:
+							</label>
+							<input id="ch2" class="booking-calendar" name="checkout" type="text" placeholder="06 февраля 2026">
+						</div>
+						<div class="input-line">
+							<div class="input-adults">
+								
+								<div class="booking-minus-plus">
+									<label for="ch3">Взрослые:
+								</label>
+									<button class="btn-grey icon-minus" type="button"></button>
+									<input class="class="booking-calendar-select" id="ch3" type="text" value="2">
+									<button class="btn-grey icon-plus" type="button"></button>
+								</div>
+								
+								<div class="booking-minus-plus">
+									<label for="ch4">Дети:
+								</label>
+									<button class="btn-grey icon-minus" type="button"></button>
+									<input class="booking-calendar-select" id="ch3" type="text" value="2">
+									<button class="btn-grey icon-plus" type="button"></button>
+								</div>
+							</div>	
+						</div>
+						<button type="submit" class="form-btn-blue"><span><a style="color: white; text-decoration: none;" href="log.php">найти</a></span></button>
+					</form>
+				
+			</section>
+			<section class="map">
+				<div class="map-canvas">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1679742.3888529367!2d-112.002569!3d34.686338!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6b38c28b698d0d4a!2z0J3QsNGG0LjQvtC90LDQu9GM0L3Ri9C5INC30LDQv9C-0LLQtdC00L3QuNC6INCa0L7QutC-0L3QuNC90L4!5e0!3m2!1sru!2sru!4v1520506477877" width="600" height="450" frameborder="0" style="border:0" allowfullscreen>
+						
+					</iframe>
+				</div>
+				<footer class="main-footer">
+			<p class="hashtag">#Visitsedona</p>
+			<div class="footer-social">
+				<a class="social-btn social-tg" href="#">Инстаграм</a>
+				<a class="social-btn social-fb" href="#">Фейсбук</a>
+				<a class="social-btn social-yout" href="#">Вконтакте</a>	
+			</div>
+			<div class="copyright">
+				Website by KKZ
+			</div>
+		</footer>
+			</section>
+		</main>
+	</div>	
+	</body>
+
+</html>

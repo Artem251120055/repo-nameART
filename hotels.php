@@ -1,0 +1,193 @@
+<?php
+	session_start();
+	$user = $_SESSION['user'];
+?>
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Hotel "Sedona"</title>
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/styles.css"
+	</head>
+	<body>	
+	<div class="wrapper">
+		<header class="main-header clearfix">
+			
+				<nav class="main-navigator container ">
+					<li><a href="#">Информация</a></li>
+					<li><a href="#">Фото и видео</a></li>
+					<li class="main-logo"><a href="index.html"><img src="img/logo.png" alt="Логотип"></a></li>
+					<li><a href="#">Карта штата</a></li>
+					<li><a class="hotels-active">Гостинницы</a></li>
+				</nav>
+				<a href="logout.php">Выйти из: <?echo ($user);?></a>
+				<a href="profile.php">Мои брони</a>
+		</header>
+		<section class="filters clearfix">
+			
+			<form name="infrastructure " class="infrastructure" method="post">
+				<p>Инфраструктура: </p>
+				<input type="checkbox" checked id="swim">
+				<label for="swim">Бассейн</label>
+				<input id="park" type="checkbox"><label for="park">Парковка</label>
+				<input id="wifi" type="checkbox"><label for="wifi">Wi-fi</label>
+			</form>
+			<form name="apartment" class="apartment-type" method="post">
+				<p>Тип жилья:</p>
+				<input id="hotel" type="checkbox" checked><label for="hotel">Гостинница</label>
+				<input id="motel" type="checkbox" checked><label for="motel">Мотель</label>
+				<input id="appartam" type="checkbox" checked><label for="appartam">Аппартаменты</label>
+			</form>
+			<div class="filter-range">
+				<p class="filter-range-title"> Стоимость в сутки (Р):</p>
+				<div class="from-to">
+					<label class="min-price">от <input name="min-price" value="0" type="text"></label>
+					<label class="max-price">до <input name="max-price" value="3000" type="text"></label>
+				</div>
+				<div class="range-controls">
+					<div class="scale">
+						<div class="bar"></div>
+						<div class="range-toggle range-toggle-min"></div>
+						<div class="range-toggle range-toggle-max"></div>
+					</div>
+				</div>
+				<button type="submit" class="btn-transparent">
+					Показать
+				</button>
+			</div>	
+		</section>
+		<section class="hotels-list">
+			<div class="sort-navigation clearfix">
+				<div class="find">
+					Найдено:3
+				</div>
+				<ul class="sorting">
+					<li>сортировка</li>
+					<li>по цене</li>
+					<li class="inactive"> <span>по типу</span></li>
+					<li class="inactive"><span>по рейтингу</span></li>
+
+				</ul>
+				<div class="rating-filter">
+					<i>Up</i>
+					<i>Down</i>
+				</div>
+			</div>	
+			<div class="hotels-kind clearfix">
+				<div class="hotel-image">
+					<img src="img/amara.jpg" alt="Amara Resort" width="135px" height="90px">
+				</div>
+				<form action="first.php" method="POST">
+					<div class="hotel-content">
+						<h2>Amara resort & spa </h2>
+						<span> Гостинница</span>
+						<span> от 4000р. </span>
+						<div class="btn-details">
+							<a href="#">Подробнее</a>
+						</div>
+						<div class="btn-details">
+							<input type="hidden" name="user" value="<? echo $user?>">
+							<input type="hidden" name="hotel" value="Amara resort & spa">
+							<label for="">Дата начала</label>
+							<input type="date" name="datenach" placeholder="Дата начала">
+							<label for="">Дата окончания</label>
+							<input type="date" name="dateokon" placeholder="Дата начала">
+						</div>
+						<div class="book-it">
+							<button type="submit">Забронировать</button>
+						</div>
+					</div>
+					<div class="hotel-rating">
+						<div class="str four_stars">
+						</div>
+						<div class="amount-rating">
+							Рейтинг: 8,5
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="hotels-kind clearfix">
+				<form action="second.php" method="post">
+				<div class="hotel-image">
+					<img src="img/desert.jpg" alt="Desert quail inn" width="135px" height="90px">
+				</div>
+				<div class="hotel-content">
+					<h2>Desert quail inn </h2>
+					<span>Мотель</span>
+					<span> от 3000р. </span>
+					<div class="btn-details">
+						<a href="#">Подробнее</a>
+					</div>
+					<div class="btn-details">
+							<input type="hidden" name="user" value="<? echo $user?>">
+							<input type="hidden" name="hotel" value="Desert quail inn ">
+							<label for="">Дата начала</label>
+							<input type="date" name="datenach" placeholder="Дата начала">
+							<label for="">Дата окончания</label>
+							<input type="date" name="dateokon" placeholder="Дата начала">
+						</div>
+						<div class="book-it">
+							<button type="submit">Забронировать</button>
+						</div>
+				</div>
+				<div class="hotel-rating">
+					<div class="str three_stars">
+					</div>
+					<div class="amount-rating">
+						Рейтинг: 8,9
+					</div>
+				</div>
+				</form>
+			</div>
+			<div class="hotels-kind clearfix">
+				<form action="third.php" method="post">
+				<div class="hotel-image">
+					<img src="img/villas.jpg" alt="Villas at poco diablo" width="135px" height="90px">
+				</div>
+				<div class="hotel-content">
+					<h2>Villas at poco diablo</h2>
+					<span>Апартаменты</span>
+					<span> от 2000р. </span>
+					<div class="btn-details">
+						<a href="#">Подробнее</a>
+					</div>
+					<div class="btn-details">
+							<input type="hidden" name="user" value="<? echo $user?>">
+							<input type="hidden" name="hotel" value="Villas at poco diablo">
+							<label for="">Дата начала</label>
+							<input type="date" name="datenach" placeholder="Дата начала">
+							<label for="">Дата окончания</label>
+							<input type="date" name="dateokon" placeholder="Дата начала">
+						</div>
+						<div class="book-it">
+							<button type="submit">Забронировать</button>
+						</div>
+				</div>
+				<div class="hotel-rating">
+					<div class=" str two_stars">
+					</div>
+					<div class="amount-rating">
+						Рейтинг: 9,2
+					</div>
+				</div>
+				</form>
+			</div>
+
+		</section>
+
+		<footer class="hotels-footer">
+			<p class="hashtag">#Visitsedona</p>
+			<div class="footer-social">
+				<a class="social-btn social-tg" href="#">Инстаграм</a>
+				<a class="social-btn social-fb" href="#">Фейсбук</a>
+				<a class="social-btn social-yout" href="#">Вконтакте</a>	
+			</div>
+			<div class="copyright">
+				<span>Website by KKZ</span>
+			</div>
+		</footer>
+	</div>	
+</body>
+</html>
